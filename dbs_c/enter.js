@@ -1,3 +1,4 @@
+
 let element=document.getElementById("entra");
 console.log(element.value);
 
@@ -18,7 +19,8 @@ function change(){
         
         if(pattern.test(chst)){
             if(noise.test(chst)) continue;
-            output.value+=chst+"\n";
+            console.log(chst.replace(pattern,""));
+            output.value+=chst.replace(pattern,"")+"\n";
         }
     }
     
