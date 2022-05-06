@@ -6,7 +6,7 @@ let output=document.getElementById("Bye");
 let checkButton = document.getElementById('clickButton');
 checkButton.addEventListener('click',change);
 
-const pattern=/e1b[0-9]{5}[=|-|(|!|-|*]*>/;
+const pattern=/e1b[0-9]{5}[=|\-|(|!|*]*>/;
 const noise=/\\r/;
 
 
@@ -20,6 +20,7 @@ function change(){
         if(pattern.test(chst)){
             if(noise.test(chst)) continue;
             console.log(chst.replace(pattern,""));
+            console.log(chst.replace("a"));
             output.value+=chst.replace(pattern,"")+"\n";
         }
     }
